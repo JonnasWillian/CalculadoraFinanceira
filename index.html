@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>BEM VINDO AO NOSSO CÁLCULO FINANCEIRO</h1>
+
+            <div class="form">
+                <h2>Cálcule A Sua Reserva De Emergência</h2>
+                  <form>
+                    <div class="items-form">
+                      <input id="objetivo" placeholder="Qual Seu objetivo financeiro ?" type="number"/>
+                      <p id="Pobjetivo"></p>
+                      <input id="caixa" placeholder="Quanto Você Tem Em Caixa Ou Divida ?" type="number"/>
+                      <p id="Pcaixa"></p>
+                      <input id="salario" placeholder="Seu salário ?"type="number"/>
+                      <p id="Psalario"></p>
+                      <input id="despesa" placeholder="Suas Despesas ?" type="number"/> 
+                      <p id="Pdespesa"></p>
+                      <input type="button" onclick="ReservaDeEmergencia()" value="CALCULAR"/>
+                      
+                      <div class="Resposta">
+                        <p id="Mensal"></p>
+                        <p id="Objetivo"></p>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+        </div>
+<!--
+  <div class="form">
+                <h2>Cálcule A Sua RENTABILIDADE EM RENDA FIXA</h2>
+                  <form>
+                    <div class="items-form">
+                      <input id="cdi" placeholder="Qual Valor Do CDI ?" type="number"/>
+                      <input id="duracao" placeholder="Quantos Meses Será A Aplicação ?" type="number"/>
+                      <input id="valor" placeholder="Valor Investido"type="number"/> 
+                      <input type="button" onclick="RendaFixa()" value="CALCULAR"/>
+                      
+                      <div class="Resposta">
+                        <p id="CdiCalculo"></p>
+                      </div>
+
+                    </div>
+                  </form>
+                </div>
+-->
+            
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
