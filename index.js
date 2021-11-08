@@ -43,14 +43,16 @@ function ReservaDeEmergencia(){
 
     if (Correcao === 2 ){
         text.innerHTML = (`Olá, você possui um valor total de R$: ${liquido} mensal`);
-        text2.innerHTML = (`Falta R$:${Objetivo - Caixa} se continuar reservando patrimonio assim, chegara ao seu objetivo em ${parseInt(tempo)} meses`);
+        text2.innerHTML = (`Falta R$:${Objetivo - Caixa} se continuar reservando patrimonio assim, chegará ao seu objetivo em ${parseInt(tempo)} meses`);
+        Pobjetivo.innerHTML = (``)
+        Psalario.innerHTML = (``)
     }else {
         text.innerHTML = ("Por favor, preencha os campos corretamente")
-        text2.innerHTML = ("  ")
+        text2.innerHTML = ("")
     }
-     
 
 }
+
 
 function RendaFixa(){
     //Variavéis
