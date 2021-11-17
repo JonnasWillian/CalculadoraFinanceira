@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo Financeiro</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
+
 <body>
+
+  <div class="apresentacao">
+    <!--
+      Futuro Login ou texto
+    -->
+  </div>
+
+  <div class="explicacao">
+    <h1>Bem Vindo a nossa de Cálculo financeiro</h1>
+    <h2> Aqui vamos te ajudar a realizar seus cálculos e rever conceitos que possam te auxiliar</h2>
+    <h3>Reserva De Emergência</h3>
+    <p>A reserva de emergência é um montante de dinheiro que você guarda para utilizar em uma situação emergencial. 
+      Essa quantia te dará tranquilidade para suprir despesas mensais e continuar mantendo a sua qualidade de vida,
+      O valor pode ser a soma de 4 a 12 meses do custo de vida mensal. Quem tem despesas de R$ 5.000 por mês, por exemplo,
+     na estimativa mais modesta deve ter R$ 20 mil guardados para uma situação inesperada.
+      Não existe um valor exato para a reserva de emergência, porque esse cálculo vai depender do custo de vida de cada investidor.
+       Em geral, o que os especialistas recomendam é que a reserva de emergência seja composta por um valor que seja equivalente a
+        pelo menos 6 vezes o custo mensal de cada pessoa.
+    </p>
+
+    </div>
+
+  <br><hr><br>
+
+  <div class="forminfo">
+
+  <div class="box">
+    <form action="">
+        <fieldset>
+            <legend><b>Reserva De Emergência</b></legend>
+            <br>
+            <div class="inputBox">
+                <input type="number" id="objetivo"  class="inputUser" required>
+                <label for="nome" class="labelInput">Digite Seu Objetivo Financeiro</label>
+                <p id="Pobjetivo"></p>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number" id="caixa"  class="inputUser" required>
+                <label for="endereco"  class="labelInput">Seu Valor Em Caixa</label>
+                <p id="Pcaixa"></p>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number" id="salario" class="inputUser" required>
+                <label for="email" class="labelInput">Digite O Seu Salário</label>
+                <p id="Psalario"></p>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number" id="rendaextra" class="inputUser" required>
+                <label for="telefone" class="labelInput">Sua Renda Extra</label>
+                <p id="Prendaextra"></p>
+            </div>
+            <br>
+            <div class="inputBox">
+                <input type="number" id="despesa" class="inputUser" required>
+                <label for="cidade" class="labelInput">Suas Despesas</label>
+                <p id="Pdespesa"></p>
+            </div>
+            <br><br>
+            <div class="inputBox">
+                <input type="number"  id="despesaextra" class="inputUser" required>
+                <label for="estado" class="labelInput">Suas Despesas Extra</label>
+                <p id="PdespesaExtra"></p>
+            </div>
+
+            <br><br>
+            <input type="button" name="submit" id="submit" onclick="ReservaDeEmergencia() " value="Calcular"> <br> <br>
+            <input type="button" name="submit" id="submit"  onclick="limpar()" value="Limpar Tabela"/>
+            <div class="Resposta">
+              <p id="Mensal"></p>
+              <p id="Objetivo"></p>
+            </div>
+        </fieldset>
+    </form>
+  </div>
+  
+  </div>
+
+  <!--
     <main>
         <div class="container">
             <h1>BEM VINDO AO NOSSO CÁLCULO FINANCEIRO</h1>
@@ -17,16 +99,26 @@
                 <h2>Cálcule A Sua Reserva De Emergência</h2>
                   <form>
                     <div class="items-form">
-                      <input id="objetivo" placeholder="Qual Seu objetivo financeiro ?" type="number"/>
+                      <p>Digite Seu Objetivo Financeiro</p>
+                      <input id="objetivo" placeholder="Quando Você Quer Ter No Futuro?" type="number"/>
                       <p id="Pobjetivo"></p>
-                      <input id="caixa" placeholder="Quanto Você Tem Em Caixa Ou Divida ?" type="number"/>
+                      <p>Digite Seu Valor Em Caixa Ou Valor De Divida</p>
+                      <input id="caixa" placeholder="Quanto Você Tem Guardado Ou Devendo?" type="number" />
                       <p id="Pcaixa"></p>
-                      <input id="salario" placeholder="Seu salário Líquido?"type="number"/>
+                      <p>Digite Seu salário Líquido</p>
+                      <input id="salario" placeholder="Qual Valor Mensal Cai Em Sua Conta ?"type="number" />
                       <p id="Psalario"></p>
-                      <input id="despesa" placeholder="Suas Despesas ?" type="number"/> 
+                      <p>Digite Sua Renda Extra</p>
+                      <input id="rendaextra" placeholder="Qual Valor Extra Você Conseguiu Esse Mês ?"type="number" />
+                      <p id="Prendaextra"></p>
+                      <p>Digite Suas Despesas Fixas</p>
+                      <input id="despesa" placeholder="Quanto Você Gasta Mensalmente ?" type="number"/> 
                       <p id="Pdespesa"></p>
+                      <p>Digite Suas Despesas Variaveis</p>
+                      <input id="despesaextra" placeholder="Quanto Você Acabou Gastando A Mais" type="number"/> 
+                      <p id="PdespesaExtra"></p>
                       <input type="button" onclick="ReservaDeEmergencia()" value="calcular"/>
-
+                      <input type="submit" onclick="limpar()" value="limpar"/>
                       
                       <div class="Resposta">
                         <p id="Mensal"></p>
@@ -37,7 +129,7 @@
                   </form>
                 </div>
         </div>
-<!--
+
   <div class="form">
                 <h2>Cálcule A Sua RENTABILIDADE EM RENDA FIXA</h2>
                   <form>
@@ -54,11 +146,13 @@
                     </div>
                   </form>
                 </div>
--->
-            
-        </div>
 
-    </main>
+            
+</div>
+
+</main>
+  -->
+    
     <script src="index.js"></script>
 </body>
 </html>
