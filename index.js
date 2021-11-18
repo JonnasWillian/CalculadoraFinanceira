@@ -58,7 +58,7 @@ function ReservaDeEmergencia(){
 
     if (Correcao === 5 ){
         text.innerHTML = (`Olá, você possui um valor total de R$: ${liquido} mensal`);
-        text2.innerHTML = (`Falta R$:${Objetivo - Caixa} se continuar reservando patrimonio assim, chegará ao seu objetivo em ${parseInt(tempo)} meses`);
+        text2.innerHTML = (`Falta R$:${Objetivo - Caixa} se continuar reservando patrimonio assim, chegará ao seu objetivo em ${Math.ceil(tempo)} meses`);
         Pobjetivo.innerHTML = (``)
         Psalario.innerHTML = (``)
         Pdespesa.innerHTML = (``)
