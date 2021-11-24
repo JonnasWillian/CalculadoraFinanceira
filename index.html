@@ -20,7 +20,7 @@
   <div class="ReservaEmergencia">
 
     <div class="explicacao">
-      <h1>Bem Vindo a nossa calculadora de Cálculo financeiro</h1>
+      <h1>Bem-Vindo á nossa Calculadora De Cálculo Financeiro</h1>
       <h2> Aqui vamos te ajudar a realizar seus cálculos e rever conceitos que possam te auxiliar</h2>
       <h3>Reserva De Emergência</h3>
   
@@ -109,7 +109,7 @@
 
   <div class="Cdi">
     <dev class="explicao">
-      <h3>Cálculo do CDI ou IPCA</h3>
+      <h3>Cálculo do CDI</h3>
     </dev>
 
     <div class="assunto1">
@@ -118,9 +118,10 @@
         <p>CDI: Os Certificados de Depósitos Interbancários são títulos emitidos pelos bancos como forma de captação ou 
           aplicação de recursos excedentes. Criado em meados da década de 1980, os CDIs são aplicações com prazos de 1 dia útil,
            com objetivo de melhorar a liquidez de uma determinada instituição financeira. <br><br>
-           IPCA: Índice de preços no consumidor é usado para observar tendências de inflação.
-            É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país,
-             comparando com períodos anteriores.
+           A taxa CDI se tornou um indexador importante para economia no geral, utilizado não somente para as relações interbancárias,
+            mas também para cálculo de títulos públicos, letras de câmbio, etc. Pois o Cdi se tornou a taxa minima de 
+            redimento na Renda Fixa
+           <br><br>
         </p>
       </div>
   
@@ -132,69 +133,75 @@
     </div>
   </div>
 
-  <!--
-    <main>
-        <div class="container">
-            <h1>BEM VINDO AO NOSSO CÁLCULO FINANCEIRO</h1>
+  <div class="forminfo">
 
-            <div class="form">
-                <h2>Cálcule A Sua Reserva De Emergência</h2>
-                  <form>
-                    <div class="items-form">
-                      <p>Digite Seu Objetivo Financeiro</p>
-                      <input id="objetivo" placeholder="Quando Você Quer Ter No Futuro?" type="number"/>
-                      <p id="Pobjetivo"></p>
-                      <p>Digite Seu Valor Em Caixa Ou Valor De Divida</p>
-                      <input id="caixa" placeholder="Quanto Você Tem Guardado Ou Devendo?" type="number" />
-                      <p id="Pcaixa"></p>
-                      <p>Digite Seu salário Líquido</p>
-                      <input id="salario" placeholder="Qual Valor Mensal Cai Em Sua Conta ?"type="number" />
-                      <p id="Psalario"></p>
-                      <p>Digite Sua Renda Extra</p>
-                      <input id="rendaextra" placeholder="Qual Valor Extra Você Conseguiu Esse Mês ?"type="number" />
-                      <p id="Prendaextra"></p>
-                      <p>Digite Suas Despesas Fixas</p>
-                      <input id="despesa" placeholder="Quanto Você Gasta Mensalmente ?" type="number"/> 
-                      <p id="Pdespesa"></p>
-                      <p>Digite Suas Despesas Variaveis</p>
-                      <input id="despesaextra" placeholder="Quanto Você Acabou Gastando A Mais" type="number"/> 
-                      <p id="PdespesaExtra"></p>
-                      <input type="button" onclick="ReservaDeEmergencia()" value="calcular"/>
-                      <input type="submit" onclick="limpar()" value="limpar"/>
-                      
-                      <div class="Resposta">
-                        <p id="Mensal"></p>
-                        <p id="Objetivo"></p>
-                      </div>
-
-                    </div>
-                  </form>
+    <div class="box">
+      <form action="">
+          <fieldset>
+              <legend><b>CDI</b></legend>
+              <br>
+              <div class="inputBox">
+                  <input type="number" id="cdi"  class="inputUser">
+                  <label for="nome" class="labelInput">Digite a taxa do CDI</label>
+                  <p id="Pcdi"></p>
+              </div>
+              <br><br>
+              <!--
+                 <div class="inputBox">
+                  <input type="number" id="imposto"  class="inputUser" required>
+                  <label for="nome" class="labelInput">Digite A Taxa De Imposto</label>
+                  <p id="Pimposto"></p>
                 </div>
-        </div>
-
-  <div class="form">
-                <h2>Cálcule A Sua RENTABILIDADE EM RENDA FIXA</h2>
-                  <form>
-                    <div class="items-form">
-                      <input id="cdi" placeholder="Qual Valor Do CDI ?" type="number"/>
-                      <input id="duracao" placeholder="Quantos Meses Será A Aplicação ?" type="number"/>
-                      <input id="valor" placeholder="Valor Investido"type="number"/> 
-                      <input type="button" onclick="RendaFixa()" value="CALCULAR"/>
-                      
-                      <div class="Resposta">
-                        <p id="CdiCalculo"></p>
-                      </div>
-
-                    </div>
-                  </form>
-                </div>
-
-            
-</div>
-
-</main>
-  -->
+                <br><br>
+              -->
+              <div class="inputBox">
+                  <input type="number" id="duracao"  class="inputUser" required>
+                  <label for="endereco"  class="labelInput">Quantos Meses Iram Durar ?</label>
+                  <p id="Pduracao"></p>
+              </div>
+              <br><br>
+              <div class="inputBox">
+                  <input type="number" id="valor" class="inputUser" required>
+                  <label for="email" class="labelInput">Digite O Valor Do Investimento</label>
+                  <p id="Pvalor"></p>
+              </div>
+              <br><br>
+  
+              <br><br>
+              <input type="button" name="submit" id="submit" onclick="RendaFixa() " value="Calcular"> <br> <br>
+              <input type="button" name="submit" id="submit"  onclick="limpar1()" value="Limpar Tabela"/>
+              <div class="Resposta">
+                <p id="CdiCalculo"></p>
+                <p id="Objetivo"></p>
+              </div>
+          </fieldset>
+      </form>
+    </div>
     
+    </div>
+
+    <div class="IPCA">
+      <dev class="explicao">
+        <h3>Cálculo do IPCA</h3>
+      </dev>
+  
+      <div class="assunto">
+  
+        <div class="areaImagem">
+          <img src="./src/img/IPCA.png" alt="Apresentação Reserva De Emergência">
+        </div>
+  
+        <div class="areaTexto">
+          <p>IPCA: Índice de preços no consumidor é usado para observar tendências de inflação.
+            É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país,
+             comparando com períodos anteriores.
+          </p>
+        </div>
+        
+      </div>
+
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
