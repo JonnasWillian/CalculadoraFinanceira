@@ -6,7 +6,7 @@ body{
 }
 
 /* TOPO DO SITE */
-.apresentacao{
+.presentation{
   background-image: url("https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-position: center;
   background-size: cover;
@@ -17,7 +17,7 @@ body{
 
 /* Explicação Reserva de Emergência */
 
-.ReservaEmergencia{
+.EmergencyReservation{
   background-image: linear-gradient(to right, rgb(20, 167, 135), rgb(0, 250, 196));
   width: 100%;
   height: 100%;
@@ -27,11 +27,11 @@ body{
   flex-direction: column;
 }
 
-.explicacao h1, h2, h3{
+.explanation h1, h2, h3{
   text-align: center;
 }
 
-.assunto{
+.Subject{
   width: 100%;
   height: 100%;
   display: flex;
@@ -40,7 +40,7 @@ body{
   padding: 30px 50px 30px;
 }
 
-.assunto1{
+.Subject1{
   width: 100%;
   height: 100%;
   display: flex;
@@ -49,17 +49,17 @@ body{
   padding: 30px 50px 10px;
 }
 
-.areaImagem{
+.ImageArea{
   float:left;
   margin-top:10px;
 }
 
-.areaImagem img{
+.ImageArea img{
   width:400px;
   height: 300px;
 }
 
-.areaTexto p{
+.TextArea p{
   float:right;
   max-width:500px;
   margin-left:10px;
@@ -145,42 +145,42 @@ legend{
 }
 
 @media screen and (max-width:900px){
-  .assunto{width: 80%;}
-  .assunto1{width: 80%;}
+  .Subject{width: 80%;}
+  .Subject1{width: 80%;}
 }
 
 @media screen and (max-width:700px){
 
   /* Assuntos */
-  .ReservaEmergencia{
+  .EmergencyReservation{
     align-items: center;
     width: 100%;
     height: 100%;
   }
   
-  .assunto{
+  .Subject{
     width: 80%;
     height: 100%;
     display: table;
   }
 
-  .assunto1{
+  .Subject21{
     width: 80%;
     height: 100%;
     display: table;
     order: 1;
   }
   
-  .areaImagem{
+  .ImageArea{
     float:left;
     margin-top:10px;
   }
   
-  .areaImagem img{
+  .ImageArea img{
     width:100%;
   }
   
-  .areaTexto p{
+  .TextArea p{
     float:unset;
     max-width:300px;
     height: 100%;

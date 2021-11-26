@@ -11,26 +11,26 @@
 
 <body>
 
-  <div class="apresentacao">
+  <div class="presentation">
     <!--
       Futuro Login ou texto
     -->
   </div>
 
-  <div class="ReservaEmergencia">
+  <div class="EmergencyReservation">
 
-    <div class="explicacao">
+    <div class="explanation">
       <h1>Bem-Vindo á nossa Calculadora De Cálculo Financeiro</h1>
       <h2> Aqui vamos te ajudar a realizar seus cálculos e rever conceitos que possam te auxiliar</h2>
       <h3>Reserva De Emergência</h3>
   
-      <div class="assunto">
+      <div class="Subject">
   
-        <div class="areaImagem">
+        <div class="ImageArea">
           <img src="./src/img/Reserva.png" alt="Apresentação Reserva De Emergência">
         </div>
   
-        <div class="areaTexto">
+        <div class="TextArea">
           <p>A reserva de emergência é um montante de dinheiro que você guarda para utilizar em uma situação emergencial. 
             Essa quantia te dará tranquilidade para suprir despesas mensais e continuar mantendo a sua qualidade de vida,
             O valor pode ser a soma de 4 a 12 meses do custo de vida mensal. Quem tem despesas de R$ 5.000 por mês, por exemplo,
@@ -45,8 +45,6 @@
       
   </div>
 
-  
-
   <br><hr><br>
 
   <div class="forminfo">
@@ -57,47 +55,46 @@
             <legend><b>Reserva De Emergência</b></legend>
             <br>
             <div class="inputBox">
-                <input type="number" id="objetivo"  class="inputUser" required>
+                <input type="number" id="goal"  class="inputUser" required>
                 <label for="nome" class="labelInput">Digite Seu Objetivo Financeiro</label>
-                <p id="Pobjetivo"></p>
+                <p id="Pgoal"></p>
             </div>
             <br><br>
             <div class="inputBox">
-                <input type="number" id="caixa"  class="inputUser" required>
+                <input type="number" id="box"  class="inputUser" required>
                 <label for="endereco"  class="labelInput">Seu Valor Em Caixa</label>
-                <p id="Pcaixa"></p>
             </div>
             <br><br>
             <div class="inputBox">
-                <input type="number" id="salario" class="inputUser" required>
+                <input type="number" id="wage" class="inputUser" required>
                 <label for="email" class="labelInput">Digite O Seu Salário</label>
-                <p id="Psalario"></p>
+                <p id="Pwage"></p>
             </div>
             <br><br>
             <div class="inputBox">
-                <input type="number" id="rendaextra" class="inputUser" required>
+                <input type="number" id="extraincome" class="inputUser" required>
                 <label for="telefone" class="labelInput">Sua Renda Extra</label>
-                <p id="Prendaextra"></p>
+                <p id="Pextraincome"></p>
             </div>
             <br>
             <div class="inputBox">
-                <input type="number" id="despesa" class="inputUser" required>
+                <input type="number" id="expense" class="inputUser" required>
                 <label for="cidade" class="labelInput">Suas Despesas</label>
-                <p id="Pdespesa"></p>
+                <p id="Pexpense"></p>
             </div>
             <br><br>
             <div class="inputBox">
-                <input type="number"  id="despesaextra" class="inputUser" required>
+                <input type="number"  id="extraexpense" class="inputUser" required>
                 <label for="estado" class="labelInput">Suas Despesas Extra</label>
-                <p id="PdespesaExtra"></p>
+                <p id="Pextraexpense"></p>
             </div>
 
             <br><br>
-            <input type="button" name="submit" id="submit" onclick="ReservaDeEmergencia() " value="Calcular"> <br> <br>
-            <input type="button" name="submit" id="submit"  onclick="limpar()" value="Limpar Tabela"/>
+            <input type="button" name="submit" id="submit" onclick="EmergencyReserve() " value="Calcular"> <br> <br>
+            <input type="button" name="submit" id="submit"  onclick="Clean()" value="Limpar Tabela"/>
             <div class="Resposta">
-              <p id="Mensal"></p>
-              <p id="Objetivo"></p>
+              <p id="Monthly"></p>
+              <p id="Goal"></p>
             </div>
         </fieldset>
     </form>
@@ -108,13 +105,14 @@
   <br><hr><br>
 
   <div class="Cdi">
-    <dev class="explicao">
+
+    <dev class="explanation">
       <h3>Cálculo do CDI</h3>
     </dev>
 
-    <div class="assunto1">
+    <div class="Subject1">
 
-      <div class="areaTexto">
+      <div class="TextArea">
         <p>CDI: Os Certificados de Depósitos Interbancários são títulos emitidos pelos bancos como forma de captação ou 
           aplicação de recursos excedentes. Criado em meados da década de 1980, os CDIs são aplicações com prazos de 1 dia útil,
            com objetivo de melhorar a liquidez de uma determinada instituição financeira. <br><br>
@@ -125,7 +123,7 @@
         </p>
       </div>
   
-      <div class="areaImagem">
+      <div class="ImageArea">
         <img src="./src/img/CDI.png" alt="Apresentação Reserva De Emergência" width="400px" height="400px">
       </div>
 
@@ -146,33 +144,33 @@
                   <p id="Pcdi"></p>
               </div>
               <br><br>
-              <!--
+
                  <div class="inputBox">
-                  <input type="number" id="imposto"  class="inputUser" required>
-                  <label for="nome" class="labelInput">Digite A Taxa De Imposto</label>
-                  <p id="Pimposto"></p>
+                  <input type="number" id="tax"  class="inputUser">
+                  <label for="nome" class="labelInput">Digite A Taxa De Imposto De Renda</label>
+                  <p id="Ptax"></p>
                 </div>
                 <br><br>
-              -->
+
               <div class="inputBox">
-                  <input type="number" id="duracao"  class="inputUser" required>
-                  <label for="endereco"  class="labelInput">Quantos Meses Iram Durar ?</label>
-                  <p id="Pduracao"></p>
+                  <input type="number" id="time"  class="inputUser" required>
+                  <label for="endereco"  class="labelInput">Quantos Meses Irão Durar ?</label>
+                  <p id="Ptime"></p>
               </div>
               <br><br>
               <div class="inputBox">
-                  <input type="number" id="valor" class="inputUser" required>
+                  <input type="number" id="price" class="inputUser" required>
                   <label for="email" class="labelInput">Digite O Valor Do Investimento</label>
-                  <p id="Pvalor"></p>
+                  <p id="Pprice"></p>
               </div>
               <br><br>
   
               <br><br>
-              <input type="button" name="submit" id="submit" onclick="RendaFixa() " value="Calcular"> <br> <br>
-              <input type="button" name="submit" id="submit"  onclick="limpar1()" value="Limpar Tabela"/>
+              <input type="button" name="submit" id="submit" onclick="CDI() " value="Calcular"> <br> <br>
+              <input type="button" name="submit" id="submit"  onclick="Clean1()" value="Limpar Tabela"/>
               <div class="Resposta">
-                <p id="CdiCalculo"></p>
-                <p id="Objetivo"></p>
+                <p id="CdiCalculation"></p>
+                <p id="Goal"></p>
               </div>
           </fieldset>
       </form>
@@ -180,27 +178,87 @@
     
     </div>
 
-    <div class="IPCA">
-      <dev class="explicao">
-        <h3>Cálculo do IPCA</h3>
+    <br><hr><br>
+
+    <div class="LCI">
+
+      <dev class="explanation">
+        <h3>Cálculo do LCI / CLA</h3>
       </dev>
+
+      <div class="Subject">
   
-      <div class="assunto">
-  
-        <div class="areaImagem">
-          <img src="./src/img/IPCA.png" alt="Apresentação Reserva De Emergência">
+        <div class="ImageArea">
+          <img src="./src/img/Reserva.png" alt="Apresentação Reserva De Emergência">
         </div>
   
-        <div class="areaTexto">
-          <p>IPCA: Índice de preços no consumidor é usado para observar tendências de inflação.
-            É calculado com base no preço médio necessário para comprar um conjunto de bens de consumo e serviços num país,
-             comparando com períodos anteriores.
+        <div class="TextArea">
+          <p>LCI: A Letra de Crédito Imobiliário (LCI) é um investimento de renda fixa emitido por bancos. 
+            Os recursos captados por esse tipo de aplicação são direcionados para financiar empreendimentos e 
+            atividades do setor imobiliário. <br><br>
+            A LCI (Letra de Crédito Imobiliária) é excelente opção para quem quer investir em aplicação sem 
+            cobrança de imposto de renda e que, até R$ 250 mil, é completamente segura, independentemente 
+            da instituição emissora desse título.<br><br>
+            <br><br>
+            LCA:Aplicar em uma LCA nada mais é do que um empréstimo feito a uma instituição para que ela tenha 
+            fundos para custear operações de crédito no setor agrícola. O rendimento obtido pelo investidor é 
+            justamente o valor dos juros desse empréstimo. <br><br>
+            O retorno do investimento depende da dinâmica das variações deste indicador. Se ele subir, 
+            sua remuneração pode ser maior, se ele cair, ela pode ser menor. Geralmente, esse retorno gira 
+            em torno de 90% do CDI ao ano, podendo variar de corretora para corretora.27
           </p>
         </div>
         
       </div>
-
+ 
     </div>
+  
+    <div class="forminfo">
+  
+      <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>LCI / LCA</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="number" id="Cdi"  class="inputUser">
+                    <label for="nome" class="labelInput">Digite a taxa do CDI</label>
+                    <p id="pcdi"></p>
+                </div>
+                <br><br>
+  
+                   <div class="inputBox">
+                    <input type="number" id="Tax"  class="inputUser">
+                    <label for="nome" class="labelInput">Digite A Taxa De Rendimento Pelo CDI</label>
+                    <p id="ptax"></p>
+                  </div>
+                  <br><br>
+  
+                <div class="inputBox">
+                    <input type="number" id="Time"  class="inputUser" required>
+                    <label for="endereco"  class="labelInput">Quantos Meses Irão Durar ?</label>
+                    <p id="ptime"></p>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" id="Price" class="inputUser" required>
+                    <label for="email" class="labelInput">Digite O Valor Do Investimento</label>
+                    <p id="pprice"></p>
+                </div>
+                <br><br>
+    
+                <br><br>
+                <input type="button" name="submit" id="submit" onclick="LCI() " value="Calcular"> <br> <br>
+                <input type="button" name="submit" id="submit"  onclick="Clean2()" value="Limpar Tabela"/>
+                <div class="Resposta">
+                  <p id="cdiCalculation"></p>
+                  <p id="GOAL"></p>
+                </div>
+            </fieldset>
+        </form>
+      </div>
+      
+      </div>
 
     <script src="index.js"></script>
 </body>

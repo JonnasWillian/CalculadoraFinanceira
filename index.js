@@ -1,170 +1,258 @@
-//Renda Fixa
-function ReservaDeEmergencia(){
+//Reserva De Emergencia
+function EmergencyReserve(){
     
     //variavéis
-    var objetivo = document.getElementById("objetivo");
-    var salario = document.getElementById("salario");
-    var rendaextra = document.getElementById("rendaextra");
-    var despesa = document.getElementById("despesa");
-    var despesaextra = document.getElementById("despesaextra");
-    var caixa = document.getElementById("caixa");
-    var Correcao = 0;
+    var goal = document.getElementById("goal");
+    var wage = document.getElementById("wage");
+    var extraincome = document.getElementById("extraincome");
+    var expense = document.getElementById("expense");
+    var extraexpense = document.getElementById("extraexpense");
+    var box = document.getElementById("box");
+    var Correction = 0;
     
     
     //Conexão com o HTML
-    var Pobjetivo = document.getElementById("Pobjetivo");
-    var Psalario = document.getElementById("Psalario");
-    var Pdespesa = document.getElementById("Pdespesa");
-    var Pcaixa = document.getElementById("Pcaixa");
-    var text = document.getElementById("Mensal");
-    var text2 = document.getElementById("Objetivo");
-    var Pdespesaextra = document.getElementById("PdespesaExtra");
-    var Pextra = document.getElementById("Prendaextra");
+    var Pgoal = document.getElementById("Pgoal");
+    var Pwage = document.getElementById("Pwage");
+    var Pexpense = document.getElementById("Pexpense");
+    var Monthly = document.getElementById("Monthly");
+    var TextGoal = document.getElementById("Goal");
+    var Pextraexpense = document.getElementById("Pextraexpense");
+    var Pextraincome = document.getElementById("Pextraincome");
 
     //Conversão
-    var Objetivo = Number(objetivo.value)
-    const CalculoObjetivo = Objetivo <= 0
-        ? Pobjetivo.innerHTML = (`Seu Objetivo Não Pode Ser Negativo`)
-        : Correcao = Correcao + 1;
+    var Goal = Number(goal.value)
+    const CalculationGoal = Goal <= 0
+        ? Pgoal.innerHTML = (`Seu Objetivo Não Pode Ser Negativo`)
+        : Correction = Correction + 1;
 
-    var Caixa = Number(caixa.value);
+    var Box = Number(box.value);
 
-    var Salario = Number(salario.value);
-    const CalculoSalario = Salario <= 0
-        ? Psalario.innerHTML = (`Você Tem Que Possuir Uma Renda`)
-        : Correcao = Correcao + 1;
+    var Wage = Number(wage.value);
+    const CalculationWage  = Wage <= 0
+        ? Pwage.innerHTML = (`Você Tem Que Possuir Uma Renda`)
+        : Correction = Correction + 1;
 
-    var RendaExtra = Number(rendaextra.value)
-    const CalculoRendaExtra = RendaExtra <= -1 
-        ?Pextra.innerHTML=("Você Tem Que Possuir Um Extra Maior Que 0")
-        :Correcao = Correcao + 1
+    var Extraincome = Number(extraincome.value)
+    const CalculationExtraincome = Extraincome <= -1 
+        ?Pextraincome.innerHTML=("Você Tem Que Possuir Um Extra Maior Que 0")
+        :Correction = Correction + 1
 
-    var Despesa = Number(despesa.value);
-    const CalculoDespesa = Despesa < 0
-        ? Pdespesa.innerHTML = (`Por Favor, Digite Um Número Positivo`)
-        : Correcao = Correcao + 1;
+    var Expense = Number(expense.value);
+    const CalculationExpense = Expense < 0
+        ? Pexpense.innerHTML = (`Por Favor, Digite Um Número Positivo`)
+        : Correction = Correction + 1;
 
-    var Despesaextra = Number(despesaextra.value)
-    const CalculoDespesaExtra = Despesaextra < 0
-        ? Pdespesaextra.innerHTML = (`Por Favor, Digite Um Número Positivo`)
-        : Correcao = Correcao + 1;
+    var Extraexpense = Number(extraexpense.value)
+    const CalculationExtraExpense = Extraexpense < 0
+        ? Pextraexpense.innerHTML = (`Por Favor, Digite Um Número Positivo`)
+        : Correction = Correction + 1;
 
     //Cálculos
-    var liquido = (Salario + RendaExtra) - (Despesa + Despesaextra)
-    //var liquido = Salario - (Despesa + Despesaextra);
-    var tempo = (Objetivo - Caixa) / liquido
+    var NetSalary = (Wage + Extraincome) - (Expense + Extraexpense)
+    var Time = (Goal - Box) / NetSalary
 
     //Impressão dos valores
 
-    if (Correcao === 5 ){
-        text.innerHTML = (`Olá, você possui um valor total de R$: ${liquido} mensal`);
-        text2.innerHTML = (`Falta R$:${Objetivo - Caixa} se continuar reservando patrimônio assim, chegará ao seu objetivo em ${Math.ceil(tempo)} meses`);
-        Pobjetivo.innerHTML = (``)
-        Psalario.innerHTML = (``)
-        Pdespesa.innerHTML = (``)
-        Pdespesaextra.innerHTML = (``)
-        Pextra.innerHTML = (``)
+    if (Correction === 5 ){
+        Monthly.innerHTML = (`Olá, você possui um valor total de R$: ${NetSalary} mensal`);
+        TextGoal.innerHTML = (`Falta R$:${Goal - Box} se continuar reservando patrimônio assim, chegará ao seu objetivo em ${Math.ceil(Time)} meses`);
+        Pgoal.innerHTML = (``)
+        Pwage.innerHTML = (``)
+        Pexpense.innerHTML = (``)
+        Pextraexpense.innerHTML = (``)
+        Pextraincome.innerHTML = (``)
     }else {
-        text.innerHTML = ("Por favor, preencha os campos corretamente")
-        text2.innerHTML = ("")
+        Monthly.innerHTML = ("Por favor, preencha os campos corretamente")
+        TextGoal.innerHTML = ("")
     }   
 
-    return text, text2, Pdespesa,Pobjetivo,Psalario
+    return Monthly, TextGoal, Pexpense,Pgoal,Pwage
 }
 
 //Limpar Campos
-function limpar(){
-    document.getElementById("objetivo").value = "";
-    document.getElementById("salario").value = "";
-    document.getElementById("despesa").value = "";
-    document.getElementById("caixa").value = "";
-    document.getElementById("rendaextra").value = "";
-    document.getElementById("despesaextra").value = "";
-    var text = document.getElementById("Mensal");
-    var text2 = document.getElementById("Objetivo");
-    var Pobjetivo = document.getElementById("Pobjetivo");
-    var Psalario = document.getElementById("Psalario");
-    var Pdespesa = document.getElementById("Pdespesa");
-    var Pdespesaextra = document.getElementById("PdespesaExtra");
-    var Pextra = document.getElementById("Prendaextra");
-    text.innerHTML = ("");
-    text2.innerHTML = ("");
-    Pobjetivo.innerHTML = (``);
-    Psalario.innerHTML = (``);
-    Pdespesa.innerHTML = (``);
-    Pdespesaextra.innerHTML = (``);
-    Pextra.innerHTML = (``);
+function Clean(){
+    document.getElementById("goal").value = "";
+    document.getElementById("wage").value = "";
+    document.getElementById("expense").value = "";
+    document.getElementById("box").value = "";
+    document.getElementById("extraincome").value = "";
+    document.getElementById("extraexpense").value = "";
+    var Monthly = document.getElementById("Monthly");
+    var TextGoal = document.getElementById("Goal");
+    var Pwage = document.getElementById("Pwage");
+    var Pgoal = document.getElementById("Pgoal");
+    var Pexpense = document.getElementById("Pexpense");
+    var Pextraexpense = document.getElementById("Pextraexpense");
+    var Pextraincome = document.getElementById("Pextraincome");
+    Monthly.innerHTML = ("");
+    TextGoal.innerHTML = ("");
+    Pgoal.innerHTML = (``);
+    Pwage.innerHTML = (``);
+    Pexpense.innerHTML = (``);
+    Pextraexpense.innerHTML = (``);
+    Pextraincome.innerHTML = (``);
 }
 
-//Renda Fixa
-function RendaFixa(){
+//CDI
+function CDI(){
     //Variavéis
     var cdi = document.getElementById("cdi")
-    var duracao = document.getElementById("duracao")
-    var valor = document.getElementById("valor")
-    var Correcao = 0;
-    //var imposto = document.getElementById("imposto")
+    var time = document.getElementById("time")
+    var price = document.getElementById("price")
+    var Correction = 0;
+    var tax = document.getElementById("tax")
 
     //Conexão com o HTML
-    var CalculoCdi = document.getElementById("CdiCalculo")
-    var Objetivo = document.getElementById("Objetivo")
+    var CalculationCdi = document.getElementById("CdiCalculation")
+    var Goal = document.getElementById("Goal")
     var Pcdi = document.getElementById("Pcdi")
-    var Pduracao = document.getElementById("Pduracao")
-    var Pvalor = document.getElementById("Pvalor")
+    var Ptime = document.getElementById("Ptime")
+    var Pprice = document.getElementById("Pprice")
+    var Ptax = document.getElementById("Ptax")
 
     //conversão
     var Cdi = Number(cdi.value)
-    const CalculoDoCdi = Cdi <= 0
+    const CalculationCDI = Cdi <= 0
         ?Pcdi.innerHTML=("Você Tem Que Possuir Uma Rentabilidade Maior Que 0")
-        :Correcao = Correcao + 1
+        :Correction = Correction + 1
 
-    var Duracao = Number(duracao.value)
-    const TemDuracao = Duracao <= 0
-        ?Pduracao.innerHTML=("A duração Do Investimento Tem Que Ser Maior Que 0")
-        :Correcao = Correcao + 1
+    var Time = Number(time.value)
+    const CalculationTime = Time <= 0
+        ?Ptime.innerHTML=("A duração Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
 
-    var Valor = Number(valor.value)
-    const ValorDoInvestimento = Valor <= 0
-        ?Pvalor.innerHTML=("Valor Do Investimento Tem Que Ser Maior Que 0")
-        :Correcao = Correcao + 1
-    //var Imposto = Number(imposto.value)
+    var Price = Number(price.value)
+    const CalculationPrice = Price <= 0
+        ?Pprice.innerHTML=("Valor Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    var Tax = Number(tax.value)
+    const TaxAmount = Tax < 0
+        ?Ptax.innerHTML=("Valor Do Imposto Não Pode Ser Negativo")
+        :Correction = Correction + 1
 
     //Cálculo
-    var rendimento = Cdi / 12;
+    var Yield = Cdi / 12;
     
-    for (var contador = 0; contador < Duracao; contador++){
-        var soma = (Valor * rendimento) /100;
-        Valor = Valor + soma
+    for (var counter = 0; counter < Time; counter++){
+        var sum = (Price * Yield) /100;
+        var TaxCharged = (sum * Tax)/100;
+        Price = (Price + sum) - TaxCharged;
+        var ActualIncome = Price;
     }
 
     //Impressão De Valores
-    if (Correcao === 3 ){
-        CalculoCdi.innerHTML = (`Olá, o juros do CDI seria R$: ${rendimento}% mensal, você conseguiria ${Valor} até o final do tempo proposto`);
-        Objetivo.innerHTML = (``)
+    if (Correction === 4 ){
+        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria R$: ${Yield}% mensal, você conseguiria ${ActualIncome} até o final do tempo proposto`);
+        Goal.innerHTML = (``)
         Pcdi.innerHTML = (``)
-        Pvalor.innerHTML = (``)
-        Pduracao.innerHTML = (``)
+        Pprice.innerHTML = (``)
+        Ptime.innerHTML = (``)
+        Ptax.innerHTML = (``)
     }else {
-        Objetivo.innerHTML = ("Por favor, preencha os campos corretamente")
-        CalculoCdi.innerHTML = ("")
+        Goal.innerHTML = ("Por favor, preencha os campos corretamente")
+        CalculationCdi.innerHTML = ("")
     }   
 }
 
 //Limpar Campos
-function limpar1(){
-    document.getElementById("Objetivo").value = "";
-    document.getElementById("CdiCalculo").value = "";
-    document.getElementById("Pcdi").value = "";
-    document.getElementById("Pvalor").value = "";
-    document.getElementById("Pduracao").value = "";
-    var CalculoCdi = document.getElementById("CdiCalculo")
-    var Objetivo = document.getElementById("Objetivo")
+function Clean1(){
+    document.getElementById("cdi").value="";
+    document.getElementById("time").value="";
+    document.getElementById("price").value="";
+    document.getElementById("tax").value="";
+    var CalculationCdi = document.getElementById("CdiCalculation")
+    var Goal = document.getElementById("Goal")
     var Pcdi = document.getElementById("Pcdi")
-    var Pduracao = document.getElementById("Pduracao")
-    var Pvalor = document.getElementById("Pvalor")
-    CalculoCdi.innerHTML = ("");
-    Objetivo.innerHTML = ("");
-    Pcdi.innerHTML = (``);
-    Pduracao.innerHTML = (``);
-    Pvalor.innerHTML = (``);
+    var Ptime = document.getElementById("Ptime")
+    var Pprice = document.getElementById("Pprice")
+    var Ptax = document.getElementById("Ptax")
+    CalculationCdi.innerHTML = ("");
+    Goal.innerHTML = (``)
+    Pcdi.innerHTML = (``)
+    Pprice.innerHTML = (``)
+    Ptime.innerHTML = (``)
+    Ptax.innerHTML = (``)
+}
+
+//LCI / LCA
+function LCI(){
+    //Variavéis
+    var cdi = document.getElementById("Cdi")
+    var time = document.getElementById("Time")
+    var price = document.getElementById("Price")
+    var Correction = 0;
+    var tax = document.getElementById("Tax")
+
+    //Conexão com o HTML
+    var CalculationCdi = document.getElementById("cdiCalculation")
+    var Goal = document.getElementById("GOAL")
+    var Pcdi = document.getElementById("pcdi")
+    var Ptime = document.getElementById("ptime")
+    var Pprice = document.getElementById("pprice")
+    var Ptax = document.getElementById("ptax")
+
+    //conversão
+    var Cdi = Number(cdi.value)
+    const CalculationCDI = Cdi <= 0
+        ?Pcdi.innerHTML=("Você Tem Que Possuir Uma Rentabilidade Maior Que 0")
+        :Correction = Correction + 1
+
+    var Time = Number(time.value)
+    const CalculationTime = Time <= 0
+        ?Ptime.innerHTML=("A duração Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    var Price = Number(price.value)
+    const CalculationPrice = Price <= 0
+        ?Pprice.innerHTML=("Valor Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    var Tax = Number(tax.value)
+    const TaxAmount = Tax <= 0
+        ?Ptax.innerHTML=("Valor Do Imposto Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    //Cálculo
+    var Yield = Cdi / 12;
+    
+    for (var counter = 0; counter < Time; counter++){
+        var sum = (Price * Yield) /100;
+        var TaxCharged = (sum * Tax)/100;
+        Price = Price + TaxCharged;
+        var ActualIncome = Price;
+    }
+
+    //Impressão De Valores
+    if (Correction === 4 ){
+        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria ${Tax}% mensal, você conseguiria R$:${ActualIncome} até o final do tempo proposto`);
+        Goal.innerHTML = (``)
+        Pcdi.innerHTML = (``)
+        Pprice.innerHTML = (``)
+        Ptime.innerHTML = (``)
+        Ptax.innerHTML = (``)
+    }else {
+        Goal.innerHTML = ("Por favor, preencha os campos corretamente")
+        CalculationCdi.innerHTML = ("")
+    }   
+}
+//Limpar Campos
+function Clean2(){
+    document.getElementById("Cdi").value="";
+    document.getElementById("Time").value="";
+    document.getElementById("Price").value="";
+    document.getElementById("Tax").value="";
+    var CalculationCdi = document.getElementById("cdiCalculation")
+    var Goal = document.getElementById("GOAL")
+    var Pcdi = document.getElementById("pcdi")
+    var Ptime = document.getElementById("ptime")
+    var Pprice = document.getElementById("pprice")
+    var Ptax = document.getElementById("ptax")
+    CalculationCdi.innerHTML = ("");
+    Goal.innerHTML = (``)
+    Pcdi.innerHTML = (``)
+    Pprice.innerHTML = (``)
+    Ptime.innerHTML = (``)
+    Ptax.innerHTML = (``)
 }
