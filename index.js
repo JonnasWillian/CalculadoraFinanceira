@@ -144,7 +144,7 @@ function CDI(){
 
     //Impressão De Valores
     if (Correction === 4 ){
-        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria R$: ${Yield}% mensal, você conseguiria ${ActualIncome} até o final do tempo proposto`);
+        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria ${Yield}% mensal, você conseguiria R$: ${ActualIncome} até o final do tempo proposto`);
         Goal.innerHTML = (``)
         Pcdi.innerHTML = (``)
         Pprice.innerHTML = (``)
@@ -176,7 +176,7 @@ function Clean1(){
     Ptax.innerHTML = (``)
 }
 
-//LCI / LCA
+//LCI e LCA
 function LCI(){
     //Variavéis
     var cdi = document.getElementById("Cdi")
@@ -237,6 +237,7 @@ function LCI(){
         CalculationCdi.innerHTML = ("")
     }   
 }
+
 //Limpar Campos
 function Clean2(){
     document.getElementById("Cdi").value="";
@@ -249,6 +250,141 @@ function Clean2(){
     var Ptime = document.getElementById("ptime")
     var Pprice = document.getElementById("pprice")
     var Ptax = document.getElementById("ptax")
+    CalculationCdi.innerHTML = ("");
+    Goal.innerHTML = (``)
+    Pcdi.innerHTML = (``)
+    Pprice.innerHTML = (``)
+    Ptime.innerHTML = (``)
+    Ptax.innerHTML = (``)
+}
+
+//FII
+function FII(){
+    //Variavéis
+    var fii = document.getElementById("fii")
+    var taxx = document.getElementById("taxfii")
+    var Correction = 0;
+
+    //Conexão com o HTML
+    var CalculationFii = document.getElementById("FiiCalculation")
+    var Goaal = document.getElementById("Goaal")
+    var Pfii = document.getElementById("Pfii")
+    var Ptaxfii = document.getElementById("Ptaxfii")
+
+    //conversão
+    var Fii = Number(fii.value)
+    const CalculationFII = Fii <= 0
+        ?Pfii.innerHTML=("Você Não Pode Ter Investimento Igual A 0")
+        :Correction = Correction + 1
+
+    var Taxx = Number(taxx.value)
+    const TaxAmount = Taxx <= 0
+        ?Ptaxfii.innerHTML=("Valor Do Rendimento Não Pode Ser Negativo")
+        :Correction = Correction + 1
+
+    //Cálculo
+    var sum = (Taxx * Fii) /100
+
+    //Impressão De Valores
+    if (Correction === 2 ){
+        CalculationFii.innerHTML = (`Seu rendimento mensal a essa taxa seria de R$: ${sum}`);
+        Goaal.innerHTML = (``)
+        Pfii.innerHTML = (``)
+        Ptaxfii.innerHTML = (``)
+    }else {
+        Goaal.innerHTML = ("Por favor, preencha os campos corretamente")
+        CalculationFii.innerHTML = ("")
+    }   
+}
+
+//Limpar Campos
+function Clean3(){
+    document.getElementById("fii").value="";
+    document.getElementById("taxfii").value="";
+    var CalculationFii = document.getElementById("FiiCalculation")
+    var Goaal = document.getElementById("Goaal")
+    var Pfii = document.getElementById("Pfii")
+    var Ptaxfii = document.getElementById("Ptaxfii")
+    CalculationFii.innerHTML = ("");
+    Goaal.innerHTML = (``)
+    Pfii.innerHTML = (``)
+    Ptaxfii.innerHTML = (``)
+}
+
+//CDB
+function CDB(){
+    //Variavéis
+    var cdi = document.getElementById("cdii")
+    var time = document.getElementById("tiime")
+    var price = document.getElementById("priice")
+    var Correction = 0;
+    var tax = document.getElementById("taxx")
+
+    //Conexão com o HTML
+    var CalculationCdi = document.getElementById("CdiCalculation")
+    var Goal = document.getElementById("Goal")
+    var Pcdi = document.getElementById("Pcdi")
+    var Ptime = document.getElementById("Ptime")
+    var Pprice = document.getElementById("Pprice")
+    var Ptax = document.getElementById("Ptax")
+
+    //conversão
+    var Cdi = Number(cdi.value)
+    const CalculationCDI = Cdi <= 0
+        ?Pcdi.innerHTML=("Você Tem Que Possuir Uma Rentabilidade Maior Que 0")
+        :Correction = Correction + 1
+
+    var Time = Number(time.value)
+    const CalculationTime = Time <= 0
+        ?Ptime.innerHTML=("A duração Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    var Price = Number(price.value)
+    const CalculationPrice = Price <= 0
+        ?Pprice.innerHTML=("Valor Do Investimento Tem Que Ser Maior Que 0")
+        :Correction = Correction + 1
+
+    var Tax = Number(tax.value)
+    const TaxAmount = Tax < 0
+        ?Ptax.innerHTML=("Valor Do Imposto Não Pode Ser Negativo")
+        :Correction = Correction + 1
+
+    //Cálculo
+    var Yield = Cdi / 12;
+    
+    for (var counter = 0; counter < Time; counter++){
+        var sum = (Price * Yield) /100;
+        var TaxCharged = (sum * Tax)/100;
+        Price = (Price + sum) - TaxCharged;
+        var ActualIncome = Price;
+    }
+
+    //Impressão De Valores
+    if (Correction === 4 ){
+        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria ${Yield}% mensal, você conseguiria R$: ${ActualIncome} até o final do tempo proposto`);
+        Goal.innerHTML = (``)
+        Pcdi.innerHTML = (``)
+        Pprice.innerHTML = (``)
+        Ptime.innerHTML = (``)
+        Ptax.innerHTML = (``)
+    }else {
+        Goal.innerHTML = ("Por favor, preencha os campos corretamente")
+        CalculationCdi.innerHTML = ("")
+    }   
+}
+
+//Limpar Campos
+function Clean4(){
+    document.getElementById("cdii").value="";
+    document.getElementById("tiime").value="";
+    document.getElementById("priice").value="";
+    document.getElementById("taxx").value="";
+    var CalculationCdi = document.getElementById("CdiCalculation")
+    var Goal = document.getElementById("Goal")
+    var Pcdi = document.getElementById("Pcdi")
+    var Ptime = document.getElementById("Ptime")
+    var Pprice = document.getElementById("Pprice")
+    var Ptax = document.getElementById("Ptaxx")
     CalculationCdi.innerHTML = ("");
     Goal.innerHTML = (``)
     Pcdi.innerHTML = (``)
