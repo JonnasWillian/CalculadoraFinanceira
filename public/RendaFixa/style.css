@@ -3,6 +3,8 @@
 
 body{
   font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 /* TOPO DO SITE */
@@ -32,7 +34,6 @@ body{
 }
 
 .Subject{
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -41,7 +42,6 @@ body{
 }
 
 .Subject1{
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -144,13 +144,39 @@ legend{
   background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
 }
 
+/* Menu - Voltar */
+.menu{
+  background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+  width: 20%;
+  margin-left: 550px;
+  text-align: center;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.menu a{
+  text-decoration: none;
+}
 @media screen and (max-width:900px){
   .Subject{width: 80%;}
   .Subject1{width: 80%;}
+  .menu{
+    margin-left: 300px;
+    width: 30%;
+  }
 }
 
 @media screen and (max-width:700px){
 
+  .menu{
+    margin-left: 80px;
+    width: 50%;
+  }
   /* Assuntos */
   .EmergencyReservation{
     align-items: center;
@@ -192,5 +218,17 @@ legend{
     left: 3%;
     background-color: rgba(255, 255, 255, 0);
     width: 85%;
+  }
+}
+
+
+@media screen and (min-width:1440px){
+  .menu{
+    margin-left: 600px;
+  }
+}
+@media screen and (min-width:2500px){
+  .menu{
+    margin-left: 1050px;
   }
 }

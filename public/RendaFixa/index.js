@@ -321,12 +321,12 @@ function CDB(){
     var tax = document.getElementById("taxx")
 
     //Conexão com o HTML
-    var CalculationCdi = document.getElementById("CdiCalculation")
-    var Goal = document.getElementById("Goal")
-    var Pcdi = document.getElementById("Pcdi")
-    var Ptime = document.getElementById("Ptime")
-    var Pprice = document.getElementById("Pprice")
-    var Ptax = document.getElementById("Ptax")
+    var CalculationCdi = document.getElementById("CDBCalculation")
+    var Goal = document.getElementById("CDBGoal")
+    var Pcdi = document.getElementById("CDBcdi")
+    var Ptime = document.getElementById("CDBtime")
+    var Pprice = document.getElementById("CDBprice")
+    var Ptax = document.getElementById("CDBtax")
 
     //conversão
     var Cdi = Number(cdi.value)
@@ -379,12 +379,12 @@ function Clean4(){
     document.getElementById("tiime").value="";
     document.getElementById("priice").value="";
     document.getElementById("taxx").value="";
-    var CalculationCdi = document.getElementById("CdiCalculation")
-    var Goal = document.getElementById("Goal")
-    var Pcdi = document.getElementById("Pcdi")
-    var Ptime = document.getElementById("Ptime")
-    var Pprice = document.getElementById("Pprice")
-    var Ptax = document.getElementById("Ptaxx")
+    var CalculationCdi = document.getElementById("CDBCalculation")
+    var Goal = document.getElementById("CDBGoal")
+    var Pcdi = document.getElementById("CDBcdi")
+    var Ptime = document.getElementById("CDBtime")
+    var Pprice = document.getElementById("CDBprice")
+    var Ptax = document.getElementById("CDBtaxx")
     CalculationCdi.innerHTML = ("");
     Goal.innerHTML = (``)
     Pcdi.innerHTML = (``)
