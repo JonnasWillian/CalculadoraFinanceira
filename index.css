@@ -1,4 +1,4 @@
-body{
+body {
     text-align: center;
     background-color: #0A0742;
     width: 100%;
@@ -6,20 +6,20 @@ body{
     margin: 0;
 }
 
-.main h1{
+.main h1 {
     color: #FF7B3C;
 }
 
-.main a{
+.main a {
     color: #73D0FE;
 }
 
-.main .image img{
+.main .image img {
     width: 600px;
     height: 600px;
 }
 
-.content{
+.content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,24 +28,58 @@ body{
     padding: 30px 50px 10px;
     padding: 0;
     min-height: 20vh;
-    animation-name: vantagensAnimacao;
-    animation-duration: 2s;
 }
 
-.content .links{
+  .content .links a {
+    text-decoration: none;
     background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
-    width: 20%;
-    margin-left: 300px;
+    margin-left: 70px;
+    width: 60%;
     text-align: center;
     align-items: center;
     border: none;
     padding: 20px;
-    color: white;
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
+    display: block;
   }
-  
-  .content .links a{
-    text-decoration: none;
+
+  button{
+      background-color:  none;
+  }
+
+  @media screen and (max-width:576px){
+
+    body{
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    .content{
+        width: 100%;
+        height: 100%;
+        display: table;
+      }
+
+      .image{
+        margin-top:10px;
+      }
+      
+      .main .image img {
+        width: 100%;
+        height: 600px;
+    }
+
+    .content .links{
+        float:unset;
+        max-width:300px;
+        height: 100%;
+        margin-left:-15px;
+    }
+
   }

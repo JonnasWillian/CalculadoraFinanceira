@@ -49,9 +49,10 @@ function EmergencyReserve(){
         : Correction = Correction + 1;
 
     //Cálculos
-    var NetSalary = (Wage + Extraincome) - (Expense + Extraexpense)
+    var NetSalary = (Wage + Extraincome) - (Expense + Extraexpense) 
     var Time = (Goal - Box) / NetSalary
 
+    if (NetSalary >= 0){
     //Impressão dos valores
 
     if (Correction === 5 ){
@@ -66,6 +67,14 @@ function EmergencyReserve(){
         Monthly.innerHTML = ("Por favor, preencha os campos corretamente")
         TextGoal.innerHTML = ("")
     }   
+    }else{
+        Monthly.innerHTML = ("Sua renda não pode ser menor que as despesas")
+        TextGoal.innerHTML = ("")
+    }
+
+   
+
+
 
     return Monthly, TextGoal, Pexpense,Pgoal,Pwage
 }

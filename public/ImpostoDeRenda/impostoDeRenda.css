@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* Capa do inicio */
+.capa{
+        padding: 40px 0;
+        width: 100%;
+        background: url(../../assets/ImpostoDeRenda/Receita-Federal-Imposto-de-renda-cpf.jpg) center center no-repeat fixed;
+        background-position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size:100%;
+        min-height: 600px;
+        text-align: center;
+}
+
+/* Introdução */
+.initial{
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* */
+.second{
+    background-color: #1C3F7F;
+}
+
+/* Quem Deve Declarar */
+.QuemDeveDeclarar{
+    background-color: #1C3F7F;
+    color: #ffff;
+}
+
+.QuemDeveDeclarar p, h1, h2{
+    text-align: center;
+    justify-content: center;
+}
+
+.QuemDeveDeclarar li,p {
+    padding: 10px;
+}
+
+.QuemDeveDeclarar img {
+    text-align: center;
+    align-items: center;
+}
+
+/* RendaVariavel */
+
+.RendaVariavel{}
+
+/* MultaAtraso */
+.MultaAtraso{
+    background-color: #1C3F7F;
+    color: #ffff;
+}
+
+
+/* Menu */
+.menu{ width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px 10px;
+    padding: 0;
+    min-height: 20vh;}
+
+.menu a {
+    text-decoration: none;
+    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+    margin-left: 70px;
+    width: 10%;
+    text-align: center;
+    align-items: center;
+    border: none;
+    padding: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: block; 
+    text-decoration: none;
+    color: white;
+}
