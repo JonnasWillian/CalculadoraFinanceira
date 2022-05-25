@@ -235,7 +235,7 @@ function LCI(){
 
     //Impressão De Valores
     if (Correction === 4 ){
-        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria ${Tax}% mensal, você conseguiria R$:${ActualIncome} até o final do tempo proposto`);
+        CalculationCdi.innerHTML = (`Olá, o juros do LCI/LCA seria ${Tax}% mensal, você conseguiria R$:${ActualIncome} até o final do tempo proposto`);
         Goal.innerHTML = (``)
         Pcdi.innerHTML = (``)
         Pprice.innerHTML = (``)
@@ -370,7 +370,7 @@ function CDB(){
 
     //Impressão De Valores
     if (Correction === 4 ){
-        CalculationCdi.innerHTML = (`Olá, o juros do CDI seria ${Yield}% mensal, você conseguiria R$: ${ActualIncome} até o final do tempo proposto`);
+        CalculationCdi.innerHTML = (`Olá, o juros do CDB seria ${Yield}% mensal, você conseguiria R$: ${ActualIncome} até o final do tempo proposto`);
         Goal.innerHTML = (``)
         Pcdi.innerHTML = (``)
         Pprice.innerHTML = (``)
