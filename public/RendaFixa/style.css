@@ -186,13 +186,13 @@ legend{
   }
   
   .Subject{
-    width: 80%;
+    width: 60%;
     height: 100%;
     display: table;
   }
 
-  .Subject21{
-    width: 80%;
+  .Subject1{
+    width: 60%;
     height: 100%;
     display: table;
     order: 1;
@@ -215,13 +215,24 @@ legend{
   }
 
   /* Formulário */
+  
   .box {
     left: 3%;
-    background-color: rgba(255, 255, 255, 0);
     width: 85%;
   }
 }
 
+@media screen and (min-width:1000px){
+  .menu {
+    margin-left: 425px;
+  }
+}
+
+@media screen and (min-width:1100px){
+  .menu {
+    margin-left: 583px;
+  }
+}
 
 @media screen and (min-width:1440px){
   .menu{
@@ -230,6 +241,6 @@ legend{
 }
 @media screen and (min-width:2500px){
   .menu{
-    margin-left: 1050px;
+    margin-left: 1040px;
   }
 }
